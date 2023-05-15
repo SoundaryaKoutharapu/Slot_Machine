@@ -27,6 +27,28 @@ const deposit = () =>
     
 };
 
+
+getNumberOfLines = () =>
+{
+    while(true)
+    {
+        const lines = prompt('enter number of lines to bet on: ');
+        const numberOfLines = parseFloat(lines);
+
+        if(isNaN (numberOfLines) || numberOfLines<=0 || numberOfLines >3)
+        {
+            console.log('invalid input, try again');
+        }
+        else
+        {
+            return numberOfLines;
+        }
+
+    }    
+}
+
 const depositAmount =  deposit();
 console.log(depositAmount);
+const numberOfLines = getNumberOfLines();
+console.log(numberOfLines);
 
